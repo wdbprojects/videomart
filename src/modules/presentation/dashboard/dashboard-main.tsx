@@ -1,5 +1,5 @@
-import DashboardNavbar from "../components/dashboard/dashboard-navbar";
-import DashboardSidebar from "../sidebar/dashboard-sidebar";
+import DashboardNavbar from "@/modules/components/dashboard/dashboard-navbar";
+import DashboardSidebar from "@/modules/sidebar/dashboard-sidebar";
 
 const DashboardMain = () => {
   return (

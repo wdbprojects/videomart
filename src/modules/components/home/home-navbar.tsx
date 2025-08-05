@@ -1,4 +1,5 @@
 import DarkMode from "@/components/shared/dark-mode";
+import { Button } from "@/components/ui/button";
 import { routes } from "@/config/routes";
 import Link from "next/link";
 
@@ -23,6 +24,9 @@ const HomeNavbar = () => {
         {/* //NOTE: BUTTONS & AUTH */}
         <div className="flex flex-shrink-0 items-center gap-3 p-1">
           <DarkMode />
+          <Button asChild variant="outline" size="sm">
+            <Link href={routes.login}>Login</Link>
+          </Button>
         </div>
       </div>
     </nav>

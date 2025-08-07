@@ -13,15 +13,13 @@ const HomeMain = ({ session }: { session: Session }) => {
       <Button asChild>
         <Link href={routes.dashboard}>Dashboard</Link>
       </Button>
-      <Card>
-        <CardContent>
-          {session ? (
+      {session && (
+        <Card>
+          <CardContent>
             <CardDescription>{session.user.name}</CardDescription>
-          ) : (
-            <Button>:Logout</Button>
-          )}
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 };

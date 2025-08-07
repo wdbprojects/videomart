@@ -18,7 +18,7 @@ const HomeNavbar = () => {
       fetchOptions: {
         onSuccess: () => {
           router.push(routes.login);
-          toast.info("User logged out successfully");
+          toast.warning("User logged out successfully");
         },
       },
     });

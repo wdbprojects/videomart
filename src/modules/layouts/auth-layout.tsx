@@ -1,11 +1,27 @@
-import { Button } from "@/components/ui/button";
+import DarkMode from "@/components/shared/dark-mode";
+import { buttonVariants } from "@/components/ui/button";
 import { routes } from "@/config/routes";
 import { LayoutProps } from "@/config/types";
+import { ArrowBigLeft } from "lucide-react";
 import Link from "next/link";
 
 const AuthLayout = ({ children }: LayoutProps) => {
   return (
     <div className="relative flex min-h-svh flex-col items-center justify-center">
+      <div className="flex flex-row justify-between items-center">
+        <Link
+          href={routes.home}
+          className={buttonVariants({
+            size: "sm",
+            variant: "outline",
+            className: "absolute top-4 left-4 text-xs",
+          })}
+        >
+          <ArrowBigLeft className="size-3" />
+          <span>Home</span>
+        </Link>
+        <DarkMode className="absolute top-5 right-4" />
+      </div>
       <div className="flex w-full max-w-sm flex-col gap-6">
         <Link
           href={routes.home}
@@ -19,17 +35,6 @@ const AuthLayout = ({ children }: LayoutProps) => {
           </h6>
         </Link>
         {children}
-        <div className="text-center text-balance text-xs text-muted-foreground">
-          By clicking continue, you agree to out{" "}
-          <span className="hover:text-primary hover:underline underline-offset-4 cursor-pointer transition-all">
-            <Link href="#">Terms of service</Link>
-          </span>{" "}
-          and{" "}
-          <span className="hover:text-primary hover:underline underline-offset-4 cursor-pointer transition-all">
-            <Link href="#">Privacy Policy</Link>
-          </span>
-          .
-        </div>
       </div>
     </div>
   );

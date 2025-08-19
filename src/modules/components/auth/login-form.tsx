@@ -33,7 +33,7 @@ const LoginForm = ({
   handleOnChangeEmail: (event: ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
-    <>
+    <div>
       <Card className="!pt-1 !mt-0">
         <CardHeader className="!pt-0">
           <CardTitle className="text-xl text-foreground font-semibold text-center">
@@ -132,7 +132,7 @@ const LoginForm = ({
         </span>
         .
       </div>
-    </>
+    </div>
   );
 };
 
